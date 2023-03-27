@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="styleshee" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Etch-A-Sketch</div>
+        <div class="mode">Mode: Coloring</div>
+        <div class="content">
+            <div class="board"></div>
+            <div class="buttons">
+                <button class="blackBtn" onclick="changeColor('black')">Black</button>
+                <button class="eraserBtn" onclick="changeColor('white')">Eraser</button>
+                <button class="grayBtn" onclick="changeColor('gray')">Gray</button>
+                <button class="randomBtn" onclick="changeColor('random')">Random</button>
+                <button class="resetBtn" onclick="resetBoard()">Reset</button>
+            </div>
+            <div class="sizeInput">
+                <input 
+                type="text" 
+                placeholder="Size of Board" 
+                value="16" 
+                onchange="changeSize(this.value)"
+                />
+                <button class="setSizeBtn">Set Size</button>
+            </div>
+            <div class="invalidInput">Input must be between 2 and 100.</div>
+        </div>
+    </div>
+    <script src="eas.js"></script>
+</body>
+</html>
